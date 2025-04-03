@@ -1,42 +1,109 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Because of the smaller size of this project, I put the majority of my styles in this file. 
+For ease of reading, I've separated the styles into sections, 
+where I'd make new style files in a more structured and robust project. */
+
+
+/* ----------- Base ----------- */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  width: 100vw;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ----------- Dashboard Layout ----------- */
+
+.dashboard-layout {
+  min-height: 100vh;
+  background: #fafafa;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ----------- Dashboard Header ----------- */
+
+.dashboard-header {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #ffffff;
+  padding: 48px 32px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.dashboard-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: #776cce;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 70% 100%);
+  z-index: 0;
 }
 
-.card {
-  padding: 2em;
+.dashboard-header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+
 }
 
-.read-the-docs {
-  color: #888;
+/* ----------- Dashboard Typography ----------- */
+
+.dashboard-title {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.dashboard-subtitle {
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ----------- Dashboard Content ----------- */
+
+.page-wrapper {
+  background: white;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  padding: 0 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-content-inner {
+  width: 100%;
+  max-width: 1440px;   /* here I'm centering content, giving it room to breathe, which is common for mixed form and data pages */
+  margin: 20px;
+}
+
+/* ----------- AntD Overrides for Seven Seven Six Styling ----------- */
+
+.ant-btn-primary {
+  background-color: #6C63FF;
+  border: none;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #5749d9;
+}
+
+.ant-card {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+section + section {
+  margin-top: 32px;
 }

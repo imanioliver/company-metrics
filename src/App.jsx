@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DashboardPage from './components/DashboardPage';
 import MetricsForm from './components/MetricsForm';
 import MetricsTable from './components/MetricsTable';
 import MetricsChart from './components/MetricsChart';
@@ -13,12 +14,13 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: 24, maxWidth: 1000, margin: '0 auto' }}>
-      <h1>Company Metrics Dashboard</h1>
-      <MetricsForm onAdd={addMetric} />
-      <MetricsTable metrics={metrics} />
-      <MetricsChart metrics={metrics} />
-    </div>
+    <DashboardPage>
+      <section style={{ marginBottom: 32 }}>
+        <MetricsForm onAdd={addMetric} />
+        <MetricsChart metrics={metrics} />
+        <MetricsTable metrics={metrics} />
+      </section>
+    </DashboardPage>
   );
 };
 

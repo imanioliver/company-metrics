@@ -1,12 +1,28 @@
-# React + Vite
+# Portfolio Company Metrics Tool (Seven Seven Six Assignment)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple metrics visualization tool that allows users to input, view, and visualize portfolio company metrics over time.
 
-Currently, two official plugins are available:
+## Features
+- Input key business metrics (Cash on Hand, Monthly Burn, MRR)
+- View all data in a table
+- Visualize metrics in a toggleable line chart
+- Preloaded with example data
+- Fully responsive and built using React + Ant Design + Ant Design Charts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Running Locally
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Deployment (Optional)
+
+This project was designed for local use as requested in the initial email, but can be easily deployed via:
+
+```
+npm run build
+npm run deploy
+```
+
+The vite.config.js has the base path configuration.
