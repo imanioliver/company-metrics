@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "dotenv gh-pages -d dist -r https://imanioliver:${GH_TOKEN}@github.com/imanioliver/company-metrics.git"
+   "deploy": "gh-pages -d dist -r https://github.com/imanioliver/company-metrics.git"
   },
   "homepage": "https://imanioliver.github.io/company-metrics/",
   "dependencies": {
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "dotenv": "^16.4.7",
     "dotenv-cli": "^8.0.0",
     "vite": "^6.2.0"
   }
