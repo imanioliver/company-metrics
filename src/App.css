@@ -12,6 +12,7 @@ body {
   padding: 0;
   color: #333;
   width: 100vw;
+  font-size: 16px;
 }
 
 /* ----------- Dashboard Layout ----------- */
@@ -51,7 +52,6 @@ body {
   position: relative;
   z-index: 1;
   max-width: 600px;
-
 }
 
 /* ----------- Dashboard Typography ----------- */
@@ -82,7 +82,7 @@ body {
 
 .dashboard-content-inner {
   width: 100%;
-  max-width: 1440px;   /* here I'm centering content, giving it room to breathe, which is common for mixed form and data pages */
+  max-width: 1440px;
   margin: 20px;
 }
 
@@ -106,4 +106,64 @@ body {
 
 section + section {
   margin-top: 32px;
+}
+
+/* ----------- Mobile Friendly Additions ----------- */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .dashboard-content {
+    padding: 0 16px !important;
+  }
+
+  .dashboard-content-inner {
+    margin: 12px auto !important;
+    width: 100% !important;
+  }
+
+  .dashboard-title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .dashboard-subtitle {
+    font-size: 14px;
+  }
+
+  .ant-form-inline .ant-form-item {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .ant-input,
+  .ant-input-number,
+  .ant-select,
+  .ant-picker {
+    width: 100% !important;
+  }
+
+  .ant-btn {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .ant-card {
+    margin-bottom: 24px;
+  }
+
+  .ant-card .ant-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .ant-card .ant-table {
+    font-size: 13px;
+  }
+
+  .ant-card .recharts-wrapper {
+    width: 100% !important;
+  }
 }

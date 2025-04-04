@@ -7,20 +7,39 @@ const EmailExtractModal = ({ visible, onClose, onExtract }) => {
 
   const handleExtract = async () => {
     setLoading(true);
+  
+    // --- Real GPT call (commented for demo)
+    /*
     try {
-      const res = await fetch('/api/extract', {
+      const response = await fetch('/api/extract', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ emailText }),
       });
-      const data = await res.json();
+      const data = await response.json();
       onExtract(data);
-      onClose();
-    } catch (err) {
-      console.error('Failed to extract:', err);
-    } finally {
       setLoading(false);
+      onClose();
+      return;
+    } catch (err) {
+      console.error('API error, falling back to mock:', err);
     }
+    */
+  
+    // --- Mocked fallback
+    setTimeout(() => {
+      onExtract({
+        date: '2025-03-31',
+        cash: 40000,
+        burn: 6000,
+        mrr: 4500,
+        status: 'AI: Needs Human Follow Up',
+        draft: false,
+        notes: 'AI extracted from email',
+      });
+      setLoading(false);
+      onClose();
+    }, 1500);
   };
 
   return (

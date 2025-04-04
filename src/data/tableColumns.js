@@ -1,5 +1,3 @@
-// src/data/tableColumns.js
-
 export const tableColumns = [
     {
       title: 'Date',
@@ -24,7 +22,7 @@ export const tableColumns = [
       filters: [
         { text: 'Complete', value: 'Complete' },
         { text: 'Estimated', value: 'Estimated' },
-        { text: 'Needs Follow-Up', value: 'Needs Follow-Up' },
+        { text: 'AI: Needs Human Follow Up', value: 'AI: Needs Human Follow Up' },
         { text: 'Incomplete', value: 'Incomplete' },
         { text: 'Flagged', value: 'Flagged' },
       ],

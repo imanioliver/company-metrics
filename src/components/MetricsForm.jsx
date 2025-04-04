@@ -7,6 +7,11 @@ const { Option } = Select;
 const MetricsForm = ({ onAdd }) => {
   const [form] = Form.useForm();
 
+  const initialFormValues = {
+    date: dayjs(),
+  };
+
+
   const onFinish = (values) => {
     const newMetric = {
       date: values.date.format('YYYY-MM-DD'),
@@ -23,9 +28,9 @@ const MetricsForm = ({ onAdd }) => {
 
   return (
     <Card title="Add New Metric" style={{ marginBottom: 24 }}>
-      <Form form={form} layout="inline" onFinish={onFinish} style={{ flexWrap: 'wrap' }}>
+      <Form form={form} layout="inline"  initialValues={initialFormValues} onFinish={onFinish} style={{ flexWrap: 'wrap' }}>
         <Form.Item name="date" rules={[{ required: true, message: 'Date required' }]}>
-          <DatePicker placeholder="Date" defaultValue={dayjs()} />
+          <DatePicker placeholder="Date" />
         </Form.Item>
         <Form.Item name="cash" rules={[{ required: true, message: 'Cash required' }]}>
           <InputNumber placeholder="Cash on Hand" prefix="$" />
@@ -41,7 +46,7 @@ const MetricsForm = ({ onAdd }) => {
             <Option value="Complete">✅ Complete</Option>
             <Option value="Estimated">⚠️ Estimated</Option>
             <Option value="Incomplete">⏳ Incomplete</Option>
-            <Option value="Needs Follow-Up">📌 Needs Follow-Up</Option>
+            <Option value="AI: Needs Human Follow Up">📌 AI: Needs Human Follow Up</Option>
             <Option value="Flagged">🟣 Flagged</Option>
           </Select>
         </Form.Item>

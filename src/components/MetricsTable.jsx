@@ -7,7 +7,7 @@ const statusColors = {
   Complete: 'green',
   Estimated: 'gold',
   Incomplete: 'orange',
-  'Needs Follow-Up': 'red',
+  'AI: Needs Human Follow Up': 'red',
   Flagged: 'purple',
 };
 
