@@ -18,7 +18,7 @@ In addition to Notes and Draft status, I introduced a lightweight *Status* dropd
 - ✅ Complete
 - ⚠️ Estimated
 - ⏳ Incomplete
-- 📌 Needs Follow-Up
+- 📌 AI: Needs Human Follow Up
 - 🟣 Flagged
 
 This allows associates to quickly tag the nature of an entry, making it easier to filter, audit, and summarize later without relying on unstructured notes.
@@ -29,7 +29,7 @@ This allows associates to quickly tag the nature of an entry, making it easier t
 - **Paste to Extract:** The future tool can allow associates to paste raw text from founder emails and highlight detected metrics for quick verification.
 - **Metrics History Notes:** Maintain small annotations on entries for future context (potentially automate if time allowed).
 - **Dashboard View:** Surface companies missing metrics or with too many drafts.
-- **Needs Follow-Up Notifications:** Associates could receive reminders if an entry marked as "Needs Follow-Up" remains unresolved for a defined period of time.
+- **AI: Needs Human Follow Up Notifications:** Associates could receive reminders if an entry marked as "AI: Needs Human Follow Up" remains unresolved for a defined period of time.
 
 ---
 

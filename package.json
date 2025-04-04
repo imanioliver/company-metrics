@@ -8,14 +8,17 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist -r https://github.com/imanioliver/company-metrics.git"
+    "deploy": "gh-pages -d dist -r https://github.com/imanioliver/company-metrics.git"
   },
   "homepage": "https://imanioliver.github.io/company-metrics/",
   "dependencies": {
     "@ant-design/plots": "^2.3.3",
     "antd": "^5.24.6",
+    "body-parser": "^2.2.0",
     "dayjs": "^1.11.13",
+    "express": "^5.1.0",
     "gh-pages": "^6.3.0",
+    "openai": "^4.91.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
